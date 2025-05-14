@@ -5,5 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mail Templates</title>
   </head>
-  <body></body>
+  <body>
+    <div style="display: flex; flex-direction: row; gap: 10px">
+      <div style="width: 50%">
+        <h2>Selecciona un template viejo</h2>
+
+        <select id="templateSelectorViejo">
+          <option value="">-- Selecciona un archivo --</option>
+          <option value="old_templates/index.html">
+            Template Viejo 1
+          </option>
+          <option value="old_templates/template2_viejo.html">
+            Template Viejo 2
+          </option>
+          <option value="old_templates/template3_viejo.html">
+            Template Viejo 3
+          </option>
+        </select>
+
+        <div
+          id="templateContentViejo"
+          style="margin-top: 20px; border: 1px solid #ccc; padding: 10px"
+        ></div>
+      </div>
+      <div style="width: 50%">
+        <h2>Selecciona un template nuevo</h2>
+
+        <select id="templateSelectorNuevo">
+          <option value="">-- Selecciona un archivo --</option>
+          <option value="new_templates/index.html">Template Nuevo 1</option>
+          <option value="carpeta2/template2.html">Template Nuevo 2</option>
+          <option value="carpeta3/template3.html">Template Nuevo 3</option>
+        </select>
+
+        <div
+          id="templateContentNuevo"
+          style="margin-top: 20px; border: 1px solid #ccc; padding: 10px"
+        ></div>
+      </div>
+    </div>
+
+    <script>
+      // Elementos para el template viejo
+      const selectorViejo = document.getElementById("templateSelectorViejo");
+      const contentDivViejo = document.getElementById("templateContentViejo");
+
+      selectorViejo.addEventListener("change", async function () {
+        const selectedFile = this.value;
+
+        if (selectedFile) {
+          try {
+            const res = await fetch(selectedFile);
+            if (!res.ok) throw new Error("Archivo no encontrado");
+            const html = await res.text();
+            contentDivViejo.innerHTML = html;
+          } catch (error) {
+            contentDivViejo.innerHTML = `<p style="color: red;">Error al cargar: ${error.message}</p>`;
+          }
+        } else {
+          contentDivViejo.innerHTML = ""; // Limpia si no se selecciona nada
+        }
+      });
+
+      // Elementos para el template nuevo
+      const selectorNuevo = document.getElementById("templateSelectorNuevo");
+      const contentDivNuevo = document.getElementById("templateContentNuevo");
+
+      selectorNuevo.addEventListener("change", async function () {
+        const selectedFile = this.value;
+
+        if (selectedFile) {
+          try {
+            const res = await fetch(selectedFile);
+            if (!res.ok) throw new Error("Archivo no encontrado");
+            const html = await res.text();
+            contentDivNuevo.innerHTML = html;
+          } catch (error) {
+            contentDivNuevo.innerHTML = `<p style="color: red;">Error al cargar: ${error.message}</p>`;
+          }
+        } else {
+          contentDivNuevo.innerHTML = ""; // Limpia si no se selecciona nada
+        }
+      });
+    </script>
+  </body>
 </html>
