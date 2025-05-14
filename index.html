@@ -1,132 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mail Templates</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mail Templates</title>
-</head>
+  <body>
+    <div style="display: flex; flex-direction: row; gap: 10px">
+      <div style="width: 50%">
+        <h2>Selecciona un template viejo</h2>
 
-<body>
-  <div style="display: flex; flex-direction: row; gap: 10px">
-    <div style="width: 50%">
-      <h2>Selecciona un template viejo</h2>
+        <select id="templateSelectorViejo">
+          <option value="">-- Selecciona un archivo --</option>
+          <option value="old_templates/2_$300+_Onetime_Receipt.html">
+            2_$300+_Onetime_Receipt
+          </option>
+          <option value="old_templates/2_$300_Onetime_Receipt.html" selected>
+            2_$300_Onetime_Receipt.html
+          </option>
+          <option
+            value="old_templates/2_$300+_Soft_Credit_Acknowledgement.html"
+          >
+            2_$300+_Soft_Credit_Acknowledgement.html
+          </option>
+          <option
+            value="old_templates/2_Global_Catalyst_Program_Donation_Receipt.html"
+          >
+            2_Global_Catalyst_Program_Donation_Receipt.html
+          </option>
+          <option value="old_templates/2_IN_KIND_Donor_Receipt.html">
+            2_IN_KIND_Donor_Receipt.html
+          </option>
+          <option
+            value="old_templates/2_Matching_Gift_Donor_Acknowledgment_1st donation.html"
+          >
+            2_Matching_Gift_Donor_Acknowledgment_1st donation.html
+          </option>
+          <option
+            value="old_templates/2_Matching_Gift_Donor_Acknowledgment_Continuous_Supporter.html"
+          >
+            2_Matching_Gift_Donor_Acknowledgment_Continuous_Supporter.html
+          </option>
+          <option value="old_templates/2_Stock_Donation_Thank_You.html">
+            2_Stock_Donation_Thank_You.html
+          </option>
+          <option value="old_templates/2_TEMPLATE_for_EOY_Tax_Letter.html">
+            2_TEMPLATE_for_EOY_Tax_Letter.html
+          </option>
+          <option value="old_templates/index.html">index.html</option>
+        </select>
 
-      <select id="templateSelectorViejo">
-        <option value="">-- Selecciona un archivo --</option>
-        <option value="old_templates/2_$300+_Onetime_Receipt.html">
-          2_$300+_Onetime_Receipt
-        </option>
-        <option value="old_templates/2_$300_Onetime_Receipt.html">
-          2_$300_Onetime_Receipt.html
-        </option>
-        <option value="old_templates/2_$300+_Soft_Credit_Acknowledgement.html">
-          2_$300+_Soft_Credit_Acknowledgement.html
-        </option>
-        <option value="old_templates/2_Global_Catalyst_Program_Donation_Receipt.html">
-          2_Global_Catalyst_Program_Donation_Receipt.html
-        </option>
-        <option value="old_templates/2_IN_KIND_Donor_Receipt.html">
-          2_IN_KIND_Donor_Receipt.html
-        </option>
-        <option value="old_templates/2_Matching_Gift_Donor_Acknowledgment_1st donation.html">
-          2_Matching_Gift_Donor_Acknowledgment_1st donation.html
-        </option>
-        <option value="old_templates/2_Matching_Gift_Donor_Acknowledgment_Continuous_Supporter.html">
-          2_Matching_Gift_Donor_Acknowledgment_Continuous_Supporter.html
-        </option>
-        <option value="old_templates/2_Stock_Donation_Thank_You.html">
-          2_Stock_Donation_Thank_You.html
-        </option>
-        <option value="old_templates/2_TEMPLATE_for_EOY_Tax_Letter.html">
-          2_TEMPLATE_for_EOY_Tax_Letter.html
-        </option>
-        <option value="old_templates/index.html">index.html</option>
-      </select>
+        <div
+          id="templateContentViejo"
+          style="margin-top: 20px; border: 1px solid #ccc; padding: 10px"
+        ></div>
+      </div>
+      <div style="width: 50%">
+        <h2>Selecciona un template nuevo</h2>
 
-      <div id="templateContentViejo" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px"></div>
+        <select id="templateSelectorNuevo">
+          <option value="">-- Selecciona un archivo --</option>
+          <option value="new_templates/2_$300+_Onetime_Receipt.html">
+            Plantilla
+          </option>
+          <option value="new_templates/2_$300_Onetime_Receipt.html" selected>
+            2_$300_Onetime_Receipt.html
+          </option>
+          <option
+            value="new_templates/2_$300+_Soft_Credit_Acknowledgement.html"
+          >
+            2_$300+_Soft_Credit_Acknowledgement.html
+          </option>
+          <option
+            value="new_templates/2_Global_Catalyst_Program_Donation_Receipt.html"
+          >
+            2_Global_Catalyst_Program_Donation_Receipt.html
+          </option>
+          <option value="new_templates/2_IN_KIND_Donor_Receipt.html">
+            2_IN_KIND_Donor_Receipt.html
+          </option>
+          <option
+            value="new_templates/2_Matching_Gift_Donor_Acknowledgment_1st donation.html"
+          >
+            2_Matching_Gift_Donor_Acknowledgment_1st donation.html
+          </option>
+          <option
+            value="new_templates/2_Matching_Gift_Donor_Acknowledgment_Continuous_Supporter.html"
+          >
+            2_Matching_Gift_Donor_Acknowledgment_Continuous_Supporter.html
+          </option>
+          <option value="new_templates/2_Stock_Donation_Thank_You.html">
+            2_Stock_Donation_Thank_You.html
+          </option>
+          <option value="new_templates/2_TEMPLATE_for_EOY_Tax_Letter.html">
+            2_TEMPLATE_for_EOY_Tax_Letter.html
+          </option>
+        </select>
+
+        <div
+          id="templateContentNuevo"
+          style="margin-top: 20px; border: 1px solid #ccc; padding: 10px"
+        ></div>
+      </div>
     </div>
-    <div style="width: 50%">
-      <h2>Selecciona un template nuevo</h2>
 
-      <select id="templateSelectorNuevo">
-        <option value="">-- Selecciona un archivo --</option>
-        <option value="new_templates/2_$300+_Onetime_Receipt.html">
-          Plantilla
-        </option>
-        <option value="new_templates/2_$300_Onetime_Receipt.html">
-          2_$300_Onetime_Receipt.html
-        </option>
-        <option value="new_templates/2_$300+_Soft_Credit_Acknowledgement.html">
-          2_$300+_Soft_Credit_Acknowledgement.html
-        </option>
-        <option value="new_templates/2_Global_Catalyst_Program_Donation_Receipt.html">
-          2_Global_Catalyst_Program_Donation_Receipt.html
-        </option>
-        <option value="new_templates/2_IN_KIND_Donor_Receipt.html">
-          2_IN_KIND_Donor_Receipt.html
-        </option>
-        <option value="new_templates/2_Matching_Gift_Donor_Acknowledgment_1st donation.html">
-          2_Matching_Gift_Donor_Acknowledgment_1st donation.html
-        </option>
-        <option value="new_templates/2_Matching_Gift_Donor_Acknowledgment_Continuous_Supporter.html">
-          2_Matching_Gift_Donor_Acknowledgment_Continuous_Supporter.html
-        </option>
-        <option value="new_templates/2_Stock_Donation_Thank_You.html">
-          2_Stock_Donation_Thank_You.html
-        </option>
-        <option value="new_templates/2_TEMPLATE_for_EOY_Tax_Letter.html">
-          2_TEMPLATE_for_EOY_Tax_Letter.html
-        </option>
-      </select>
+    <script>
+      // Elementos para el template viejo
+      const selectorViejo = document.getElementById("templateSelectorViejo");
+      const contentDivViejo = document.getElementById("templateContentViejo");
 
-      <div id="templateContentNuevo" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px"></div>
-    </div>
-  </div>
+      selectorViejo.addEventListener("change", async function () {
+        const selectedFile = this.value;
 
-  <script>
-    // Elementos para el template viejo
-    const selectorViejo = document.getElementById("templateSelectorViejo");
-    const contentDivViejo = document.getElementById("templateContentViejo");
-
-    selectorViejo.addEventListener("change", async function () {
-      const selectedFile = this.value;
-
-      if (selectedFile) {
-        try {
-          const res = await fetch(selectedFile);
-          if (!res.ok) throw new Error("Archivo no encontrado");
-          const html = await res.text();
-          contentDivViejo.innerHTML = html;
-        } catch (error) {
-          contentDivViejo.innerHTML = `<p style="color: red;">Error al cargar: ${error.message}</p>`;
+        if (selectedFile) {
+          try {
+            const res = await fetch(selectedFile);
+            if (!res.ok) throw new Error("Archivo no encontrado");
+            const html = await res.text();
+            contentDivViejo.innerHTML = html;
+          } catch (error) {
+            contentDivViejo.innerHTML = `<p style="color: red;">Error al cargar: ${error.message}</p>`;
+          }
+        } else {
+          contentDivViejo.innerHTML = ""; // Limpia si no se selecciona nada
         }
-      } else {
-        contentDivViejo.innerHTML = ""; // Limpia si no se selecciona nada
-      }
-    });
+      });
 
-    // Elementos para el template nuevo
-    const selectorNuevo = document.getElementById("templateSelectorNuevo");
-    const contentDivNuevo = document.getElementById("templateContentNuevo");
+      // Elementos para el template nuevo
+      const selectorNuevo = document.getElementById("templateSelectorNuevo");
+      const contentDivNuevo = document.getElementById("templateContentNuevo");
 
-    selectorNuevo.addEventListener("change", async function () {
-      const selectedFile = this.value;
+      selectorNuevo.addEventListener("change", async function () {
+        const selectedFile = this.value;
 
-      if (selectedFile) {
-        try {
-          const res = await fetch(selectedFile);
-          if (!res.ok) throw new Error("Archivo no encontrado");
-          const html = await res.text();
-          contentDivNuevo.innerHTML = html;
-        } catch (error) {
-          contentDivNuevo.innerHTML = `<p style="color: red;">Error al cargar: ${error.message}</p>`;
+        if (selectedFile) {
+          try {
+            const res = await fetch(selectedFile);
+            if (!res.ok) throw new Error("Archivo no encontrado");
+            const html = await res.text();
+            contentDivNuevo.innerHTML = html;
+          } catch (error) {
+            contentDivNuevo.innerHTML = `<p style="color: red;">Error al cargar: ${error.message}</p>`;
+          }
+        } else {
+          contentDivNuevo.innerHTML = ""; // Limpia si no se selecciona nada
         }
-      } else {
-        contentDivNuevo.innerHTML = ""; // Limpia si no se selecciona nada
-      }
-    });
-  </script>
-</body>
+      });
 
+      // ... los listeners existentes ...
+
+      window.addEventListener("DOMContentLoaded", () => {
+        if (selectorViejo.value) {
+          selectorViejo.dispatchEvent(new Event("change"));
+        }
+
+        if (selectorNuevo.value) {
+          selectorNuevo.dispatchEvent(new Event("change"));
+        }
+      });
+    </script>
+  </body>
 </html>
