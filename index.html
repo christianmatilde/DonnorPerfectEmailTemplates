@@ -8,12 +8,12 @@
 
   <body>
     <div style="display: flex; flex-direction: row; gap: 10px">
-      <div style="width: 50%">
+      <div style="width: 50%; display: none">
         <h2>Selecciona un template viejo</h2>
 
         <select id="templateSelectorViejo">
           <option value="">-- Selecciona un archivo --</option>
-          <option value="old_templates/2_$300+_Onetime_Receipt.html" >
+          <option value="old_templates/2_$300+_Onetime_Receipt.html">
             2_$300+_Onetime_Receipt
           </option>
           <option value="old_templates/2_$300_Onetime_Receipt.html">
@@ -56,12 +56,12 @@
           style="margin-top: 20px; border: 1px solid #ccc; padding: 10px"
         ></div>
       </div>
-      <div style="width: 50%">
+      <div style="width: 100%">
         <h2>Selecciona un template nuevo</h2>
 
         <select id="templateSelectorNuevo">
           <option value="">-- Selecciona un archivo --</option>
-          <option value="new_templates/2_$300_Onetime_Receipt.html" selected>
+          <option value="new_templates/2_$300_Onetime_Receipt.html">
             2_$300_Onetime_Receipt.html
           </option>
           <option value="new_templates/2_$300+_Onetime_Receipt.html">
@@ -93,7 +93,10 @@
           <option value="new_templates/2_Stock_Donation_Thank_You.html">
             2_Stock_Donation_Thank_You.html
           </option>
-          <option value="new_templates/2_TEMPLATE_for_EOY_Tax_Letter.html">
+          <option
+            value="new_templates/2_TEMPLATE_for_EOY_Tax_Letter.html"
+            selected
+          >
             2_TEMPLATE_for_EOY_Tax_Letter.html
           </option>
         </select>
